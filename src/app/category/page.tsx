@@ -26,7 +26,7 @@ export default function Page() {
       <div className="sec w-full sm:w-[80%] bg-[#f6f7f9] p-4 sm:p-6  flex flex-col gap-10 font-[family-name:var(--font-geist-sans)]">
         <section className="w-full flex flex-col sm:flex-row items-center justify-center sm:justify-between ">
           <Image
-            src="/Pick - Up (3).png"
+            src="/Pick-Up(3).png"
             alt="A description of the image content"
             width={582}
             height={132}
@@ -40,7 +40,7 @@ export default function Page() {
             className="w-[80px]"
           />
           <Image
-            src={"/Drop - Off.png"}
+            src={"/DropOff.png"}
             alt=""
             width={582}
             height={132}
