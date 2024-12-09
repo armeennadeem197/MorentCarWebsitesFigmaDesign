@@ -17,16 +17,16 @@ function Explore() {
   const products = [
     { src: "/car (1).png", title: "Koenigsegg", price: "$99.00/ day" },
     { src: "/car (2).png", title: "Nissan GT - R", price: "$80.00/ day" },
-    { src: "/car (3).png", title: "Rolls-Royce", price: "$96.00/ day" },
-    { src: "/car (4).png", title: "All New Rush", price: "$80.00/ day" },
-    { src: "/car (5).png", title: "CR - V", price: "$72.00/ day" },
-    { src: "/car (6).png", title: "All New Terios", price: "$80.00/ day" },
-    { src: "/car (7).png", title: "All New Terios", price: "$74.00/ day" },
-    { src: "/car (8).png", title: "CR  - V", price: "$80.00/ day" },
-    { src: "/car (9).png", title: "MG ZX Exclusice", price: "$76.00/ day" },
-    { src: "/car (10).png", title: "New MG ZS", price: "$80.00/ day" },
-    { src: "/car (11).png", title: "MG ZX Excite", price: "$74.00/ day" },
-    { src: "/car (13).png", title: "New MG ZS", price: "$80.00/ day" },
+    { src: "/Car (3).png", title: "Rolls-Royce", price: "$96.00/ day" },
+    { src: "/Car (4).png", title: "All New Rush", price: "$80.00/ day" },
+    { src: "/Car (5).png", title: "CR - V", price: "$72.00/ day" },
+    { src: "/Car (6).png", title: "All New Terios", price: "$80.00/ day" },
+    { src: "/Car (7).png", title: "All New Terios", price: "$74.00/ day" },
+    { src: "/Car (8).png", title: "CR  - V", price: "$80.00/ day" },
+    { src: "/Car (9).png", title: "MG ZX Exclusice", price: "$76.00/ day" },
+    { src: "/Car (10).png", title: "New MG ZS", price: "$80.00/ day" },
+    { src: "/Car (11).png", title: "MG ZX Excite", price: "$74.00/ day" },
+    { src: "/Car (13).png", title: "New MG ZS", price: "$80.00/ day" },
   ];
 
   return (

@@ -56,7 +56,7 @@ export default function Page() {
           </CardHeader>
           <CardContent className="flex flex-col gap-6">
             <div className="first">
-              <Image src={"/Pick - Up (1).png"} alt="Pick Up" width={92} height={20} />
+              <Image src={"/Pick-Up(1).png"} alt="Pick Up" width={92} height={20} />
             </div>
             <div className="sec w-full flex flex-wrap gap-4">
               <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
@@ -81,7 +81,7 @@ export default function Page() {
               </div>
             </div>
             <div className="fourth">
-              <Image src={"/Drop - Off (1).png"} alt="Drop Off" width={104} height={20} />
+              <Image src={"/Drop-Off (1).png"} alt="Drop Off" width={104} height={20} />
             </div>
             <div className="sec w-full flex flex-wrap gap-4">
               <div className="add flex flex-col gap-3 w-full lg:w-[46%]">
