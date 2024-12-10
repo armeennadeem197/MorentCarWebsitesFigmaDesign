@@ -4,7 +4,6 @@ import Image from "next/image";
 export default function Page() {
   return (
     <div className="w-full flex flex-col md:flex-row">
-      {/* Navigation Bar */}
       <div className="first w-full md:w-[25%] lg:w-[20%] flex justify-center">
         <Image
           src={"/Nav Bar.png"}
@@ -14,8 +13,6 @@ export default function Page() {
           className="w-full md:w-auto"
         />
       </div>
-
-      {/* Main Content for Desktop and Mobile */}
       <div className="sec flex w-full md:w-[75%] lg:w-[80%] bg-[#f6f7f9] p-4 sm:p-6 gap-7 flex-wrap md:flex-nowrap justify-center">
         <Image
           src={"/Details Rental.png"}
