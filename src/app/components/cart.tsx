@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-regular-svg-icons";
@@ -7,12 +8,15 @@ import Image from "next/image";
 
 function Explore() {
   const [likedItems, setLikedItems] = useState<number[]>([]);
+  const [showMore, setShowMore] = useState(false);
 
   const toggleLike = (index: number) => {
     setLikedItems((prev) =>
       prev.includes(index) ? prev.filter((id) => id !== index) : [...prev, index]
     );
   };
+
+  const toggleShowMore = () => setShowMore((prev) => !prev);
 
   const products = [
     { src: "/car (1).png", title: "Koenigsegg", price: "$99.00/ day" },
@@ -29,6 +33,8 @@ function Explore() {
     { src: "/Car (13).png", title: "New MG ZS", price: "$80.00/ day" },
   ];
 
+  const displayedProducts = showMore ? products : products.slice(0, 8);
+
   return (
     <div id="products" className="w-full flex justify-center items-center mt-10 mb-1">
       <div className="w-[90%] md:w-[80%]">
@@ -39,17 +45,24 @@ function Explore() {
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-5">
-          {products.map((product, index) => (
-            <ProductCard key={index} product={product} index={index} likedItems={likedItems} toggleLike={toggleLike} />
+          {displayedProducts.map((product, index) => (
+            <ProductCard
+              key={index}
+              product={product}
+              index={index}
+              likedItems={likedItems}
+              toggleLike={toggleLike}
+            />
           ))}
         </div>
-        <div className="flex justify-center mt-6 p-6">
-        <Link href="/payementCarRent">
-              <button className="bg-blue-500 text-white px-6 py-3 text-lg hover:bg-blue-600">
-                Show More Cars
-              </button>
-            </Link>
-        </div>
+        <section className="w-full flex justify-center mt-6">
+          <button
+            onClick={toggleShowMore}
+            className="bg-[#3563e9] px-4 py-2 text-white rounded-md mt-5"
+          >
+            {showMore ? "Show Less Cars" : "Show More Cars"}
+          </button>
+        </section>
       </div>
     </div>
   );
@@ -79,34 +92,37 @@ function ProductCard({ product, index, likedItems, toggleLike }: ProductCardProp
         <h1 className="font-bold font-sans text-sm truncate" title={product.title}>
           {product.title}
         </h1>
-        <button onClick={() => toggleLike(index)} aria-label={`Toggle favorite for ${product.title}`}>
+        <button
+          onClick={() => toggleLike(index)}
+          aria-label={`Toggle favorite for ${product.title}`}
+          aria-pressed={likedItems.includes(index)}
+        >
           <FontAwesomeIcon
             icon={faHeart}
             className={`text-xl ${likedItems.includes(index) ? "text-red-500" : "text-gray-400"}`}
-            aria-label={likedItems.includes(index) ? `Remove ${product.title} from favorites` : `Add ${product.title} to favorites`}
           />
         </button>
       </div>
 
       <div className="flex gap-[16px] justify-evenly mt-4 w-full px-4">
         <div className="flex flex-col items-center">
-          <Image src="/Gasoline.png" alt="Gasoline" width={48} height={24} />
+          <Image src="/Gasoline.png" alt="Gasoline icon" width={48} height={24} />
         </div>
         <div className="flex flex-col items-center">
-          <Image src="/Car (12).png" alt="Car" width={48} height={24} />
+          <Image src="/Car (12).png" alt="Car icon" width={48} height={24} />
         </div>
         <div className="flex flex-col items-center">
-          <Image src="/Capacity.png" alt="Capacity" width={48} height={24} />
+          <Image src="/Capacity.png" alt="Capacity icon" width={48} height={24} />
         </div>
       </div>
 
       <div className="w-full px-4 py-2 bg-gray-50 rounded-b-[10px] flex justify-between items-center">
         <span className="text-black font-bold text-lg">{product.price}</span>
         <Link href="/DetailsCarRent">
-              <button className="bg-blue-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-blue-600">
-                Rent Now
-              </button>
-              </Link>
+          <button className="bg-blue-500 text-white px-4 py-2 rounded-sm text-sm hover:bg-blue-600">
+            Rent Now
+          </button>
+        </Link>
       </div>
     </div>
   );

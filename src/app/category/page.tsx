@@ -39,7 +39,6 @@ export default function Page() {
         <Image src="/Nav Bar Side.png" alt="Sidebar" width={360} height={1600} />
       </div>
 
-      {/* Main Content */}
       <div className="w-full sm:w-[80%] bg-[#f6f7f9] p-4 sm:p-6 flex flex-col gap-10">
         <section className="w-full flex flex-col sm:flex-row items-center justify-center sm:justify-between">
           <Image
@@ -49,7 +48,7 @@ export default function Page() {
             height={132}
             className="w-[200px] md:w-[270px] lg:w-[582px] object-contain"
           />
-          <Image src="/switch.png" alt="Switch" width={60} height={60} className="w-[80px]" />
+          <Image src="/Switch.png" alt="Switch" width={60} height={60} className="w-[80px]" />
           <Image
             src="/DropOff.png"
             alt="Drop-Off"
