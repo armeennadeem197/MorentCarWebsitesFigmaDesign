@@ -6,8 +6,8 @@ export default function Navbar() {
   return (
     <div className="w-full bg-white h-auto flex flex-col md:flex-row items-center justify-between p-4 md:p-8 border-b-2 border-b-[#e7eef6]">
       {/* Left Section */}
-      <Link href="/Hero">
-        <h1 className="text-[#3563e9] text-4xl font-bold">MORENT</h1>
+      <Link href="/Hero/Hero">
+        <h1 className="text-[rgb(53,99,233)] text-4xl font-bold">MORENT</h1>
       </Link>
 
       <div className="input relative w-full md:max-w-[492px]">
