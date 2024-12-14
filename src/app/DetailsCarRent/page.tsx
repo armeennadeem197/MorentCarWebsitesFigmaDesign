@@ -1,15 +1,18 @@
 "use client";
+
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+
 interface RatingProps {
   rating: number;
   maxRating?: number;
   reviewCount?: number;
 }
+
 const Rating: React.FC<RatingProps> = ({
   rating,
   maxRating = 5,
@@ -35,7 +38,6 @@ const Rating: React.FC<RatingProps> = ({
   );
 };
 
-// Car Card Component
 interface CarCardProps {
   name: string;
   img: string;
@@ -110,7 +112,7 @@ const Page: React.FC = () => {
   };
 
   return (
-    <div className="w-full flex">
+    <div className="w-full flex flex-col sm:flex-row">
       {/* Sidebar */}
       <div className="hidden sm:flex w-[25%]">
         <Image
@@ -157,9 +159,9 @@ const Page: React.FC = () => {
                 <Rating rating={4} maxRating={5} reviewCount={440} />
               </h1>
               <p className="font-[Plus Jakarta Sans] font-medium text-[20px] leading-[40px] tracking-[-2%]">
-                NISMO has become the embodiment of Nissan's outstanding
+                NISMO has become the embodiment of Nissan&apos;s outstanding
                 performance, inspired by the most unforgiving proving ground,
-                the "race track".
+                the &quot;race track&quot;.
               </p>
               <p className="font-[Plus Jakarta Sans] font-medium text-[20px] leading-[40px] tracking-[-2%]">
                 Type Car: <span className="text-gray-600">&nbsp;Sports</span>&nbsp;
@@ -172,7 +174,7 @@ const Page: React.FC = () => {
               <div className="p-4 flex items-center gap-4">
                 <div className="flex items-center justify-between w-full">
                   <h1 className="font-bold text-lg sm:text-xl lg:text-2xl">
-                    $80.00 /{" "}
+                    $80.00 /&nbsp;
                     <span className="text-gray-500 text-sm lg:text-base">
                       day $100.00
                     </span>
@@ -201,9 +203,8 @@ const Page: React.FC = () => {
           </div>
         </div>
 
-        {/* Recent Cars Section */}
         <section className="w-full flex flex-col gap-5 mt-8">
-          <div className="flex justify-between px-10">
+          <div className="flex justify-between px-4 md:px-10">
             <h1 className="text-gray-500 text-lg">Recent Cars</h1>
             <Link href="/categories">
               <h1 className="text-[#3563e9] font-bold hover:underline">
@@ -211,7 +212,7 @@ const Page: React.FC = () => {
               </h1>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 px-4 md:px-0">
             {products.map((product, index) => (
               <CarCard
                 key={index}
