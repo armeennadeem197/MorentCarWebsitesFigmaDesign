@@ -33,6 +33,7 @@ export default function Page() {
   const productsToShow = showMore ? products : products.slice(0, 6);
 
   return (
+    <>
     <div className="w-full flex">
       {/* Sidebar */}
       <div className="hidden sm:flex w-[20%]">
@@ -124,5 +125,6 @@ export default function Page() {
         </section>
       </div>
     </div>
+    </>
   );
 }

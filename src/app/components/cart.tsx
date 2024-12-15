@@ -77,6 +77,7 @@ interface ProductCardProps {
 
 function ProductCard({ product, index, likedItems, toggleLike }: ProductCardProps) {
   return (
+    <>
     <div className="group shadow-md bg-white h-[320px] flex flex-col justify-between items-center cursor-pointer relative rounded-[10px] transition-transform transform hover:scale-105">
       <div className="flex items-center justify-center h-full">
         <Image
@@ -125,6 +126,7 @@ function ProductCard({ product, index, likedItems, toggleLike }: ProductCardProp
         </Link>
       </div>
     </div>
+    </>
   );
 }
 

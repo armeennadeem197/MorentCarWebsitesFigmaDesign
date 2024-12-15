@@ -12,7 +12,8 @@ import Link from "next/link";
 
 export default function Page() {
   return (
-    <div className="payment w-full bg-[#f6f7f9] p-4 sm:p-6 flex flex-wrap gap-6 justify-center font-[family-name:var(--font-geist-sans)]">
+    <>
+        <div className="payment w-full bg-[#f6f7f9] p-4 sm:p-6 flex flex-wrap gap-6 justify-center font-[family-name:var(--font-geist-sans)]">
       <div className="w-full flex flex-col lg:flex-row gap-6 justify-center">
         {/* Left Column - Form Cards */}
         <div className="cards w-full lg:w-[60%] flex flex-col gap-6">
@@ -247,5 +248,6 @@ export default function Page() {
         </div>
       </div>
     </div>
+    </>
   );
 }

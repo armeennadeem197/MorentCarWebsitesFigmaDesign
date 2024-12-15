@@ -112,6 +112,7 @@ const Page: React.FC = () => {
   };
 
   return (
+    <>
     <div className="w-full flex flex-col sm:flex-row">
       {/* Sidebar */}
       <div className="hidden sm:flex w-[25%]">
@@ -227,6 +228,7 @@ const Page: React.FC = () => {
         </section>
       </div>
     </div>
+    </>
   );
 };
 
