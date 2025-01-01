@@ -4,25 +4,39 @@ import Link from "next/link";
 import { useState } from "react";
 
 function Signup() {
+  type Errors = {
+    name: string;
+    email: string;
+    password: string;
+  };
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     password: "",
   });
 
-  const [errors, setErrors] = useState({
+  const [errors, setErrors] = useState<Errors>({
     name: "",
     email: "",
     password: "",
   });
 
   const validateForm = () => {
-    const newErrors: any = {};
+    const newErrors: Errors = {
+      name: "",
+      email: "",
+      password: "",
+    };
+
     if (!formData.name) newErrors.name = "Name is required";
-    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = "Valid email is required";
-    if (!formData.password || formData.password.length < 6) newErrors.password = "Password must be at least 6 characters long";
+    if (!formData.email || !/\S+@\S+\.\S+/.test(formData.email))
+      newErrors.email = "Valid email is required";
+    if (!formData.password || formData.password.length < 6)
+      newErrors.password = "Password must be at least 6 characters long";
+
     setErrors(newErrors);
-    return Object.keys(newErrors).length === 0;
+    return Object.keys(newErrors).every((key) => !newErrors[key as keyof Errors]);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -107,9 +121,7 @@ function Signup() {
             </div>
             <div className="w-full sm:w-[371px] mt-5 flex justify-between items-center text-center text-[16px]">
               <p>Already have an account?</p>
-              <Link href="/Login">
-                Login
-              </Link>
+              <Link href="/Login">Login</Link>
             </div>
           </form>
         </div>
@@ -119,3 +131,4 @@ function Signup() {
 }
 
 export default Signup;
+

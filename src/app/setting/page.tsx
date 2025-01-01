@@ -6,7 +6,7 @@ const Settings = () => {
   const [phone, setPhone] = useState('+1234567890');
   const [language, setLanguage] = useState('en');
   const [currency, setCurrency] = useState('USD');
-  const [theme, setTheme] = useState('light');
+  const [theme] = useState('light');
   const [password, setPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
 
