@@ -6,6 +6,7 @@ import Link from "next/link";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import Sidebar from "../components/Sidebar";
 
 interface RatingProps {
   rating: number;
@@ -116,12 +117,7 @@ const Page: React.FC = () => {
     <div className="w-full flex flex-col sm:flex-row">
       {/* Sidebar */}
       <div className="hidden sm:flex w-[25%]">
-        <Image
-          src="/Nav Bar Side.png"
-          alt="Sidebar"
-          width={360}
-          height={1600}
-        />
+      <Sidebar/>
       </div>
       <div className="w-full sm:w-[75%] p-6">
         <section className="w-full flex flex-col md:flex-row gap-5 items-center justify-around">

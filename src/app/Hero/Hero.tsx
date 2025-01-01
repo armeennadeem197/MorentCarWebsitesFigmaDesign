@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import Pickup from "@/app/components/pickup"
 const Banner = () => {
   return (
     <div className="container mx-auto px-4">
@@ -56,34 +56,8 @@ const Banner = () => {
           </div>
         </div>
       </div>
-
-      {/* Pickup and Drop-off Section */}
-      <div className="w-full sm:w-[80%] Top-[424px] left-[64px] justify-center p-4 sm:p-6 flex flex-col gap-10">
-        <section className="w-full flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Image
-            src="/Pick-Up(3).png"
-            alt="Pick-Up"
-            width={582}
-            height={136}
-            className="w-[200px] md:w-[270px] lg:w-[582px] object-contain"
-          />
-          <Image
-            src="/Switch.png"
-            alt="Switch"
-            width={60}
-            height={60}
-            className="w-[60px] h-[60px]"
-          />
-          <Image
-            src="/DropOff.png"
-            alt="Drop-Off"
-            width={582}
-            height={136}
-            className="w-[200px] md:w-[270px] lg:w-[582px] object-contain"
-          />
-        </section>
-      </div>
-    </div>
+        <Pickup/>
+     </div>
   );
 };
 

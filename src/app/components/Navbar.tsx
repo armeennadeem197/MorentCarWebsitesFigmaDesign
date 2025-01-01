@@ -17,7 +17,7 @@ export default function Navbar() {
           width={24}
           height={24}
           className="absolute top-1/2 left-3 transform -translate-y-1/2"
-      />
+        />
         <input
           type="text"
           title="search"
@@ -32,15 +32,43 @@ export default function Navbar() {
           className="absolute top-1/2 right-3 transform -translate-y-1/2"
         />
       </div>
-
-      {/* Right Section */}
-      <div className="icons mt-4 md:mt-0">
-        <Image
-          src="/Profil & Notification.png"
-          alt="Profile and Notification"
-          width={236}
-          height={44}
-        />
+      <div className="flex mt-4 md:mt-0 space-x-4">
+        <Link href="/">
+          <Image
+            src="/Like.png"
+            alt="Profile"
+            width={44}
+            height={44}
+            className="cursor-pointer"
+          />
+        </Link>
+        <Link href="/">
+          <Image
+            src="/Notification.png"
+            alt="Profile"
+            width={44}
+            height={44}
+            className="cursor-pointer"
+          />
+        </Link>
+        <Link href="/setting">
+          <Image
+            src="/Settings.png"
+            alt="Profile"
+            width={44}
+            height={44}
+            className="cursor-pointer"
+          />
+        </Link>
+        <Link href="/signup">
+          <Image
+            src="/Profil.png"
+            alt="Profile"
+            width={44}
+            height={44}
+            className="cursor-pointer"
+          />
+        </Link>
       </div>
     </div>
   );
